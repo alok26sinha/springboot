@@ -1,0 +1,14 @@
+The general url pattern of this webservice is as follows - 
+http://host:port/receipt/locationId/pageNumber/transaction start_date&transaction end_date
+
+
+1. Invoking the service without the page number
+passing the location id and transaction start and end dates Without passing the page number, by default it will return only the 1st page records as of now the page size is configured as 20
+
+curl -X GET --basic --user user1:secret1 "http://localhost:8080/receipt/1/2017-03-27&2017-03-28"
+
+
+2. Invoking the service with the page number
+passing the location id and transaction start and end dates as well as passing the page number
+
+curl -X GET --basic --user user1:secret1 "http://localhost:8080/receipt/1/1/2017-03-27&2017-03-28"
